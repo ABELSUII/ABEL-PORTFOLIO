@@ -140,6 +140,8 @@ span{
     width: 32vw;
     border-radius: 50%;
     box-shadow: 0 0 25px solid #00ffff;
+                0 0 50px solid #00ffff;
+                0 0 100px solid #00ffff;
     cursor: pointer;
     transition: 0.2s linear;
 }
@@ -189,7 +191,9 @@ span{
     transform: scale3d(1.03);
     background-color: #00ffff;
     color: black;
-    box-shadow: 0 0 25px #00ffff;
+    box-shadow:  0 0 10px #00ffff,
+                 0 0 30px #00ffff,
+                 0 0 60px #00ffff;
 }
 
 .typing-text{
