@@ -272,3 +272,29 @@ span{
         margin-top: 4rem;
     }
 }
+/* Default Dark Mode */
+body{
+    background-color: black;
+    color: white;
+}
+
+/* Light Mode for devices using light theme */
+@media (prefers-color-scheme: light){
+    
+    body{
+        background-color: white;
+        color: black;
+    }
+
+    nav a{
+        color: black;
+    }
+
+    .typing-text span::after{
+        background-color: white;
+    }
+
+    header{
+        background-color: rgba(255,255,255,0.8);
+    }
+}
