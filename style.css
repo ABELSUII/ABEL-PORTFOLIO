@@ -141,18 +141,19 @@ span{
 .home-img img{
     position: relative;
     width: 32vw;
-    max-width: 300px;
+    max-width: 320px;
+    height: auto;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #00ffff;
-                0 0 50px solid #00ffff;
-                0 0 100px solid #00ffff;
+    box-shadow: 0 0 25px #00ffff;
     cursor: pointer;
-    transition: 0.2s linear;
+    transition: 0.4s ease;
 }
 
 .home-img img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #00ffff,
+                0 0 50px #00ffff,
+                0 0 100px #00ffff;
 }
 
 .social-icons a{
