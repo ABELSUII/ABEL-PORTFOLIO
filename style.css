@@ -79,6 +79,9 @@ nav a.active{
         background-color: #161616;
         border-top: 0.1rem solid rgba(0,0,0,0.1);
     }
+    nav{
+    flex-wrap: wrap;
+}
 
     nav.active{
         display: block;
@@ -138,6 +141,7 @@ span{
 .home-img img{
     position: relative;
     width: 32vw;
+    max-width: 300px;
     border-radius: 50%;
     box-shadow: 0 0 25px solid #00ffff;
                 0 0 50px solid #00ffff;
@@ -255,8 +259,24 @@ span{
 
 @media(max-width:995px){
     .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
+         flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .home-img img{
+        width: 60vw;
+    }
+
+    .home-content h1{
+        font-size: 4rem;
+    }
+
+    .home-content h3{
+        font-size: 2.5rem;
+    }
+
+}
     }
 
     .home .home-content h3{
@@ -271,4 +291,23 @@ span{
         width: 70vw;
         margin-top: 4rem;
     }
+}
+@media(max-width:600px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 1rem 5%;
+    }
+
+    .home-img img{
+        width: 70vw;
+    }
+
+    nav a{
+        font-size: 1.6rem;
+    }
+
 }
