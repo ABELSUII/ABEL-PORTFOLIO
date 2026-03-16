@@ -233,8 +233,8 @@ span{
 }
 
 @keyframes cursor{
-    to{
-        border-left: 3px solid #00ffff;
+    50%{
+        border-left-color: transparent;
     }
 }
 
@@ -264,7 +264,7 @@ span{
 
 @media(max-width:995px){
     .home{
-         flex-direction: column;
+        flex-direction: column;
         text-align: center;
         gap: 3rem;
     }
@@ -280,8 +280,8 @@ span{
     .home-content h3{
         font-size: 2.5rem;
     }
+}
 
-    }
 
     .home .home-content h3{
         font-size: 2.5rem;
