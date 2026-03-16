@@ -2,92 +2,234 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<title>Abel Thomas Jacob | Portfolio</title>
+
 <link rel="stylesheet" href="style.css">
 
-<title>Portfolio Website</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 </head>
 
 <body>
 
 <header>
-<a href="#" class="logo">Abel Thomas Jacob</a>
+
+<a href="#" class="logo">Abel</a>
 
 <nav>
-<a href="#" class="active">Home</a>
-<a href="#experience">Experience</a>
+
+<a href="#home">Home</a>
 <a href="#skills">Skills</a>
 <a href="#education">Education</a>
-<a href="#hobbies">Hobbies</a>
+<a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </nav>
+
 </header>
 
 
-<!-- HOME SECTION -->
-<section class="home">
+<!-- HOME -->
+
+<section class="home" id="home">
 
 <div class="home-img">
-<img src="portfolio.jpg" alt="Abel Portfolio Image">
+<img src="portfolio.jpg" alt="">
 </div>
 
 <div class="home-content">
 
-<h1>Hi, It's <span>Abel</span></h1>
+<h1>Hi, I'm <span>Abel</span></h1>
 
 <h3 class="typing-text">I'm a <span></span></h3>
 
 <p>
-My name is Abel Thomas Jacob, and I am from Puthoor. I am currently pursuing my first year of B.Tech in Artificial Intelligence and Machine Learning at Sree Buddha College of Engineering and Technology, Pattoor. I have a strong interest in emerging technologies, especially AI and machine learning, and I am eager to develop my skills in these fields.
+AIML student passionate about technology, AI and web development.
+I enjoy building projects and learning new skills.
 </p>
 
 <div class="social-icons">
+
 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
 <a href="#"><i class="fa-brands fa-github"></i></a>
-<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-</div>
 
-<a href="#contact" class="btn">Contact me</a>
+</div>
 
 </div>
 
 </section>
 
 
-<!-- HOBBIES SECTION -->
-<section class="hobbies" id="hobbies">
+<!-- SKILLS -->
 
-<h2 class="heading">My <span>Hobbies</span></h2>
+<section class="skills" id="skills">
 
-<div class="hobby-box">
+<h2 class="heading">My <span>Skills</span></h2>
 
-<div class="hobby">
-<p>Gaming 🎮</p>
+<div class="skill">
+
+<p>HTML</p>
 <div class="progress"><span style="width:90%"></span></div>
+
 </div>
 
-<div class="hobby">
-<p>Football ⚽</p>
-<div class="progress"><span style="width:85%"></span></div>
+<div class="skill">
+
+<p>CSS</p>
+<div class="progress"><span style="width:80%"></span></div>
+
 </div>
 
-<div class="hobby">
-<p>Reading 📚</p>
-<div class="progress"><span style="width:75%"></span></div>
+<div class="skill">
+
+<p>JavaScript</p>
+<div class="progress"><span style="width:65%"></span></div>
+
 </div>
 
-<div class="hobby">
-<p>Web Designing 💻</p>
+<div class="skill">
+
+<p>Python</p>
 <div class="progress"><span style="width:70%"></span></div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section class="education" id="education">
+
+<h2 class="heading">My <span>Education</span></h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>B.Tech AIML</h3>
+<p>Sree Buddha College of Engineering</p>
+<span>2024 - Present</span>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Higher Secondary</h3>
+<p>Your School</p>
+<span>2022 - 2024</span>
+
 </div>
 
 </div>
 
 </section>
+
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+<h2 class="heading">My <span>Projects</span></h2>
+
+<div class="project-container">
+
+<div class="card">
+
+<h3>Portfolio Website</h3>
+<p>Responsive portfolio using HTML & CSS.</p>
+
+</div>
+
+<div class="card">
+
+<h3>AI Mini Project</h3>
+<p>Machine learning beginner project.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Web Design</h3>
+<p>Responsive web design practice.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="heading">Contact <span>Me</span></h2>
+
+<p>Email: abel@email.com</p>
+<p>Location: Kerala, India</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#"><i class="fa-brands fa-github"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+</div>
+
+</section>
+
+
+<!-- TYPING ANIMATION -->
+
+<script>
+
+var typed = new Typed(".typing-text span", {
+
+strings: [
+"AIML Student",
+"Web Designer",
+"Gamer",
+"Footballer"
+],
+
+typeSpeed:60,
+backSpeed:40,
+loop:true
+
+});
+
+</script>
+
+
+<!-- SCROLL REVEAL -->
+
+<script>
+
+ScrollReveal({
+
+distance:"60px",
+duration:2000,
+delay:200
+
+});
+
+ScrollReveal().reveal(".home-content",{origin:"left"});
+ScrollReveal().reveal(".home-img",{origin:"right"});
+ScrollReveal().reveal(".skills",{origin:"bottom"});
+ScrollReveal().reveal(".education",{origin:"bottom"});
+ScrollReveal().reveal(".projects",{origin:"bottom"});
+ScrollReveal().reveal(".contact",{origin:"bottom"});
+
+</script>
 
 </body>
 </html>
