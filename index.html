@@ -12,12 +12,26 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<!-- Libraries -->
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 </head>
 
 <body>
+
+<!-- LOADING SCREEN -->
+
+<div id="loader">
+<h1>Loading Portfolio...</h1>
+</div>
+
+
+<!-- PARTICLES BACKGROUND -->
+
+<div id="particles-js"></div>
+
 
 <header>
 
@@ -46,12 +60,12 @@
 
 <div class="home-content">
 
-<h1>Hi, I'm <span>Abel</span></h1>
+<h1>Hi I'm <span>Abel</span></h1>
 
 <h3 class="typing-text">I'm a <span></span></h3>
 
 <p>
-My name is Abel Thomas Jacob, and I am from Puthoor. I am currently pursuing my first year of B.Tech in Artificial Intelligence and Machine Learning at Sree Buddha College of Engineering and Technology, Pattoor. I have a strong interest in emerging technologies, especially AI and machine learning, and I am eager to develop my skills in these fields. I enjoy learning new concepts related to technology and problem-solving. Outside academics, I like gaming, playing sports, and reading manhwas, which help me stay creative and relaxed. My goal is to build a successful career as an AI/ML engineer and contribute to innovative technological solutions in the future.
+AIML student passionate about AI, Web Development and building creative projects.
 </p>
 
 <div class="social-icons">
@@ -76,28 +90,28 @@ My name is Abel Thomas Jacob, and I am from Puthoor. I am currently pursuing my 
 <div class="skill">
 
 <p>HTML</p>
-<div class="progress"><span style="width:90%"></span></div>
+<div class="progress"><span data-width="90%"></span></div>
 
 </div>
 
 <div class="skill">
 
 <p>CSS</p>
-<div class="progress"><span style="width:80%"></span></div>
+<div class="progress"><span data-width="80%"></span></div>
 
 </div>
 
 <div class="skill">
 
 <p>JavaScript</p>
-<div class="progress"><span style="width:65%"></span></div>
+<div class="progress"><span data-width="65%"></span></div>
 
 </div>
 
 <div class="skill">
 
 <p>Python</p>
-<div class="progress"><span style="width:70%"></span></div>
+<div class="progress"><span data-width="70%"></span></div>
 
 </div>
 
@@ -113,19 +127,15 @@ My name is Abel Thomas Jacob, and I am from Puthoor. I am currently pursuing my 
 <div class="timeline">
 
 <div class="timeline-item">
-
 <h3>B.Tech AIML</h3>
 <p>Sree Buddha College of Engineering</p>
 <span>2024 - Present</span>
-
 </div>
 
 <div class="timeline-item">
-
 <h3>Higher Secondary</h3>
 <p>Your School</p>
 <span>2022 - 2024</span>
-
 </div>
 
 </div>
@@ -142,24 +152,18 @@ My name is Abel Thomas Jacob, and I am from Puthoor. I am currently pursuing my 
 <div class="project-container">
 
 <div class="card">
-
 <h3>Portfolio Website</h3>
-<p>Responsive portfolio using HTML & CSS.</p>
-
+<p>Responsive portfolio using HTML CSS and JS</p>
 </div>
 
 <div class="card">
-
 <h3>AI Mini Project</h3>
-<p>Machine learning beginner project.</p>
-
+<p>Machine learning beginner project</p>
 </div>
 
 <div class="card">
-
 <h3>Web Design</h3>
-<p>Responsive web design practice.</p>
-
+<p>Modern responsive UI design practice</p>
 </div>
 
 </div>
@@ -173,8 +177,8 @@ My name is Abel Thomas Jacob, and I am from Puthoor. I am currently pursuing my 
 
 <h2 class="heading">Contact <span>Me</span></h2>
 
-<p>Email: abel@email.com</p>
-<p>Location: Kerala, India</p>
+<p>Email : abel@email.com</p>
+<p>Location : Kerala, India</p>
 
 <div class="social-icons">
 
@@ -187,13 +191,12 @@ My name is Abel Thomas Jacob, and I am from Puthoor. I am currently pursuing my 
 </section>
 
 
-<!-- TYPING ANIMATION -->
 
 <script>
 
 var typed = new Typed(".typing-text span", {
 
-strings: [
+strings:[
 "AIML Student",
 "Web Designer",
 "Gamer",
@@ -206,12 +209,6 @@ loop:true
 
 });
 
-</script>
-
-
-<!-- SCROLL REVEAL -->
-
-<script>
 
 ScrollReveal({
 
@@ -228,7 +225,62 @@ ScrollReveal().reveal(".education",{origin:"bottom"});
 ScrollReveal().reveal(".projects",{origin:"bottom"});
 ScrollReveal().reveal(".contact",{origin:"bottom"});
 
+
+particlesJS("particles-js",{
+
+particles:{
+number:{value:80},
+color:{value:"#00ffff"},
+shape:{type:"circle"},
+opacity:{value:0.5},
+size:{value:3},
+move:{speed:2}
+}
+
+});
+
+
+window.onload = function(){
+document.getElementById("loader").style.display="none";
+};
+
+
+const skills = document.querySelectorAll(".progress span");
+
+window.addEventListener("scroll",()=>{
+
+skills.forEach(skill=>{
+
+const top = skill.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(top < screen){
+skill.style.width = skill.dataset.width;
+}
+
+});
+
+});
+
+
+document.addEventListener("mousemove",(e)=>{
+
+const glow = document.querySelector(".cursor-glow");
+
+if(glow){
+
+glow.style.left = e.clientX+"px";
+glow.style.top = e.clientY+"px";
+
+}
+
+});
+
 </script>
+
+
+<div class="cursor-glow"></div>
+
 
 </body>
 </html>
