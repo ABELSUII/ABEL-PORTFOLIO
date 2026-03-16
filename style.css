@@ -316,3 +316,49 @@ span{
     }
 
 }
+.hobbies{
+    min-height: 100vh;
+    padding: 5rem 9%;
+}
+
+.hobby-box{
+    max-width: 700px;
+    margin: auto;
+}
+
+.hobby{
+    margin: 2rem 0;
+}
+
+.hobby p{
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.progress{
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress span{
+    display: block;
+    height: 100%;
+    background: #00ffff;
+    border-radius: 10px;
+    width: 0;
+    transition: 2s;
+}
+@media(max-width:768px){
+
+    .hobby-box{
+        width: 90%;
+    }
+
+    .hobby p{
+        font-size: 1.6rem;
+    }
+
+}
